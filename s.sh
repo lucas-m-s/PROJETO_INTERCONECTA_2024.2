@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Esse script recebe o conteúdo de frequencias.txt e organiza esses valores em 4 colunas de 32 linhas e os coloca em freq.txt
+# Isso é feito para que os resultados sejam copiados e colados na planilha Locutor - Frequência fundamental.xlsx num formato adequado
+# Execute assim: ./s.sh frequencias.txt > freq.txt
+
 # Verifica se o arquivo foi passado como argumento
 if [ $# -eq 0 ]; then
     echo "Uso: $0 <arquivo>"
