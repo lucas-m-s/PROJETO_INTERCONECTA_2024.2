@@ -5,7 +5,7 @@
 # Basta apenas executá-lo: ./script.sh
 
 # pasta="./dados_vibracao_sem_silencio"
-pasta="./dados_vibracao_recortado"
+pasta="./dados_vibracao"
 
 gcc fft.c -lm
 # gcc corte.c -lm

@@ -23,3 +23,5 @@ Em [Locutor - Frequência fundamental.xlsx](./Locutor%20-%20Frequência%20fundam
 > **Observação**: f0 de "Gabi A, DIA 4" parece estar errado, o correto seria 255Hz.
 
 Os scripts .sh servem apenas para executar os algoritmos para todos os arquivos de sinal de VPP. Os arquivos freq.txt e frequencias.txt são usados para guardar o resultado dos algoritmos.
+
+Foi apresentado um trabalho na XIX SECT de 2024 sobre o AMDF. O resumo expandido e os slides utilizados são, respectivamente, [resumo_expandido_sect.pdf](./resumo_expandido_sect.pdf) e [slides_sect.pptx](./slides_sect.pptx).

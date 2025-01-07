@@ -7,6 +7,7 @@
 #define fc_lo 100 //Frequência de corte do filtro passa alta
 #define fc_hi 900 //Frequência de corte do filtro passa alta
 #define fd 100 //Distância mínima, em Hz, entre cada pico do espectro de fourier
+#define offset 2140 //Offset do sinal
 #define abs(a) ((a) < 0 ? (a)*(-1) : (a))
 #define min(a, b) ((a) < (b) ? (a) : (b))
 #define max(a, b) ((a) > (b) ? (a) : (b))
@@ -158,9 +159,16 @@ int main(void)
 
   //Leitura dos dados
   int i = 0;
+  double data_max = 0;
   while(scanf("%lf", &data[i]) != EOF) {
-    data[i] /= 100;
+    data[i] -= offset; //Retirando o offset
+    data_max = max(data_max, data[i]);
     i += 2;
+  }
+
+  //Normalizando o sinal
+  for(int j = 0; j < i; j += 2) {
+    data[j] /= data_max;
   }
 
   //Encontrando a próxima potência de 2
